@@ -1,0 +1,25 @@
+{
+  "name": "pcat-projesi",
+  "version": "1.0.0",
+  "description": "Photo upload application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnsarPatika/PCAT.git"
+  },
+  "keywords": [
+    "photo"
+  ],
+  "author": "Ensar Uysal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnsarPatika/PCAT/issues"
+  },
+  "homepage": "https://github.com/EnsarPatika/PCAT#readme",
+  "devDependencies": {
+    "prettier": "2.8.4"
+  }
+}
