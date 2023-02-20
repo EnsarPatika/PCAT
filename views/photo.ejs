@@ -9,7 +9,7 @@
 				<main>
 					<div class="row mb-5 pb-4">
 						<div class="col-12">
-							<img src="img/video-detail-1.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+							<img src="<%= photo[0].image %>" alt="Image" class="img-fluid tm-catalog-item-img">
 						</div>
 					</div>
 					<div class="row mb-5 pb-5">
@@ -40,8 +40,8 @@
 		</div>
 	</div>
 
-	<script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script>
     	$(document).ready(function() {
     		$('.tm-likes-box').click(function(e) {
