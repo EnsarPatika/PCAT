@@ -16,20 +16,21 @@
 						<div class="col-xl-8 col-lg-7">
 							<!-- Video description -->
 							<div class="tm-video-description-box">
-								<h2 class="mb-5 tm-video-title"><%= photo[0].title %></h2>
-								<p class="mb-4"><%= photo[0].description %></p>	
+                                <form method="POST" action="/photopage/<%= photo[0]._id %>?_method=PUT">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control rounded-0" name="title" value="<%= photo[0].title %>">
+                                    </div>
+                                    <!-- <h2 class="mb-5 tm-video-title"></h2> -->
+                                    <!-- <p class="mb-4"><%= photo[0].description %></p>	 -->
+                                    <div class="form-group mb-0">
+                                        <textarea rows="8" class="form-control rounded-0" name="description"><%= photo[0].description %></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download" type="submit" ><span>Update Details</span></button>	
+                                    </div>	
+                                </form>
+                                
 							</div>							
-						</div>
-						<div class="col-xl-4 col-lg-5">
-							<!-- Share box -->
-							<div class="tm-bg-gray tm-share-box">
-								<div class="text-center">
-									<a href="/photopage/edit/<%= photo[0]._id %>" class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></a>	
-								</div>	
-								<div class="text-center">
-									<a href="/photopage/<%= photo[0]._id %>?_method=DELETE" class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-download" onclick="return confirm('Are you sure')"><span>Delete Photo</span></a>	
-								</div>								
-							</div>
 						</div>
 					</div>
 				</main>
