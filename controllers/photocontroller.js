@@ -12,8 +12,6 @@ exports.getAllphotos = async (req, res, next) => {
   let totalPage = Math.ceil(totalPhoto/pagePerPhoto)
   let photos = await Photo.find({}).sort('-createdDate').skip((page-1)*pagePerPhoto).limit(pagePerPhoto);
 
-  console.log(page,totalPage)
-
   // const photos = await Photo.find({}).sort('-createdDate');
   res.render('index', {
     photos,
@@ -74,5 +72,3 @@ exports.deletePhoto = async (req, res, next) => {
     res.redirect('/')
   }
 
-
-  //delete için kontrol yapılacak
